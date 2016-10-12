@@ -14,19 +14,7 @@ describe Player do
     end
   end
 
-  describe "#attack" do
-    it "can attack the opponent" do
-      expect(player).to respond_to(:attack)
-    end
 
-    it "reduces the opponant hp when attacked" do
-      expect{ player.attack(player2) }.to change{ player2.hp }.by (-10)
-    end
-  end
 
-  describe "#reduce_hp" do
-    it "reduces Player 2's hp by 10" do
-      expect{ player.reduce_hp }.to change{ player.hp }.by (-10)
-    end
-  end
+
 end
