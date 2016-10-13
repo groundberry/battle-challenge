@@ -1,5 +1,64 @@
-<form name='input' action='/names' method='post'>
-  Player 1: <input type="text" name="Player1">
-  Player 2: <input type="text" name="Player2">
-  <input type="submit" value="Submit name">
-</form>
+<body>
+  <div>
+    <form name='input' action='/names' method='post'>
+      <input type="submit" value="Submit players" class='submit_button'>
+      <p class='field'>Player 1: </p><input type="text" name="Player1" class='field'>
+      <p class='field'>Player 2: </p><input type="text" name="Player2" class='field'>
+    </form>
+  </div>
+</body>
+
+<style>
+
+body {
+
+  background-image: url('http://bit.ly/2dalJEP');
+  background-repeat: no-repeat;
+  background-position: center;;
+  background-size: cover;
+}
+
+form {
+  margin-top: 45px
+}
+
+p {
+  color: white;
+  font-family: impact;
+  font-size: 1.7em;
+  text-align: center;
+}
+
+input {
+  font-family: impact;
+  font-size: 1em;
+}
+
+.field {
+  /*float: left;*/
+  width: 170px;
+  padding: 10px;
+  margin-left: 35px;
+  border-radius: 10px;
+  border: none;
+
+}
+
+.submit_button {
+  background-color: white;
+  color: black;
+  padding: 14px 25px;
+  margin-top: 15px;
+  margin-right: 60px;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+  float: right;
+
+}
+
+
+</style>

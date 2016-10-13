@@ -3,7 +3,7 @@
   <div>
     <h1 class='headers top'>Let battle commence!</h1>
 
-    <h1 class='headers fighters'><%= @game.player1.name %> vs <%=@game.player2.name %></h1>
+    <h1 class='fighters'><%= @game.player1.name %> vs <%=@game.player2.name %></h1>
 
     <h2 class='points_player1'><%= @game.player1.name %> has <%=@game.player1.hp%> points</h2>
     <h2 class='points_player2'><%= @game.player2.name %> has <%=@game.player2.hp%> points</h2>
@@ -19,7 +19,7 @@
 
 h1 {
 
-  font-family: arial;
+  font-family: impact;
   font-size: 2em;
   text-align: center;
 
@@ -27,7 +27,7 @@ h1 {
 
 h2 {
 
-  font-family: arial;
+  font-family: impact;
   font-size: 1.75em;
   text-align: center;
 
@@ -35,16 +35,22 @@ h2 {
 
 a {
 
-  font-family: arial;
-  font-size: 1.5em;
+  font-family: impact;
+  font-size: 1.6em;
   text-align: center
 
 }
 
 body {
 
-  background-image: url("http://bit.ly/1rxYtmS")
+  background-image: url('http://bit.ly/2damy0y');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+h1.headers.top,
+h1.fighters {
+  margin-bottom: 0
 }
 
 .headers {
@@ -64,7 +70,8 @@ body {
 }
 
 .bottom {
-  margin-top: 150px
+  margin-top: 230px;
+  color: white
 
 }
 
@@ -83,7 +90,8 @@ body {
 }
 
 .start_game_button {
-  background-color: #2B40FF;
+  background-color: #558000;
+  opacity: 0.7;
   color: white;
   padding: 14px 25px;
   text-align: center;
@@ -94,8 +102,9 @@ body {
 
 .start_game_button:hover {
   transition-delay: 0.10s;
-  background-color: #2A79FF;
-  color: #191970;
+  background-color: #558000;
+  opacity: 0.4;
+  color: white;
   padding: 14px 25px;
   text-align: center;
   text-decoration: none;
