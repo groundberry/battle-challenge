@@ -1,11 +1,53 @@
 
-<h1><%= @game.player1.name %> vs <%=@game.player2.name %></h1>
+<div>
+  <h1><%= @game.player1.name %> vs <%=@game.player2.name %></h1>
 
-<h2><%= @game.player2.name %> has 100 points</h2>
+  <h2><%= @game.player1.name %> attacked <%= @game.player2.name %></h2>
 
-<a href='/player_2_turn' class='attack_button'>Attack <%=@game.player2.name %></a>
+  <h2 class='points_player1'><%= @game.player1.name %> has <%=@game.player1.hp%> points</h2>
+  <h2 class='points_player2'><%= @game.player2.name %> has <%=@game.player2.hp%> points</h2>
+
+  <a href='/player_2_turn' class='attack_button'>Attack <%=@game.player1.name %></a>
+</div>
+
 
 <style>
+
+h1 {
+
+  font-family: arial
+  font-size: large
+
+}
+
+h2 {
+
+  font-family: arial
+  font-size: medium
+
+}
+
+a {
+
+  font-family: arial
+  font-size: medium
+
+}
+
+.points_player1 {
+
+  float:left;
+  width:340px;
+
+}
+
+.points_player2 {
+
+  float:left;
+  width:340px;
+
+}
+
 .attack_button {
     background-color: #e83cdb;
     color: #191970;

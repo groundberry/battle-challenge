@@ -14,7 +14,12 @@ class Battle < Sinatra::Base
     player1 = Player.new(params[:Player1])
     player2 = Player.new(params[:Player2])
     $game = Game.new(player1, player2)
-    redirect '/player_1_turn'
+    redirect '/start_game'
+  end
+
+  get '/start_game' do
+    @game = $game
+    erb :start_game
   end
 
   get '/player_1_turn' do
