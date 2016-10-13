@@ -2,4 +2,31 @@
 
 <h2><%= @game.player1.name %> has 100 points</h2>
 
-<button><a href='/player_1_turn'>Attack <%=@game.player1.name %></a></button>
+<!-- <a href='/player_1_turn'>Attack <%=@game.player1.name %></a> -->
+
+<a href='/player_1_turn' class='attack_button'>Attack <%=@game.player1.name %></a>
+
+<style>
+.attack_button {
+    background-color: #e83cdb;
+    color: #191970;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px
+}
+
+.attack_button:hover {
+    transition-delay: 0.10s;
+
+    background-color: #e87ee1;
+    color: #191970;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px
+}
+
+</style>
