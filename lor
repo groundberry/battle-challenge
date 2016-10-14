@@ -1,86 +1,42 @@
-[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m
 
 Failures:
 
-  1) Entering names User enters their name
-     [31mFailure/Error: [0mexpect(page).to have_text([31m[1;31m'[0m[31mJohn vs Mary[1;31m'[0m[31m[0m)[0m
-     [31m  expected to find text "John vs Mary" in "John attacked Mary John has 100 points Mary has 90 points Attack John"[0m
-     [36m# ./spec/features/name_forms_spec.rb:6:in `block (2 levels) in <top (required)>'[0m
-
-  2) Player 1 turn find link to attack player 2
-     [31mFailure/Error: [0mfind_link([31m[1;31m'[0m[31mAttack Mary[1;31m'[0m[31m[0m).visible?[0m
-     [31m[0m
-     [31mCapybara::ElementNotFound:[0m
-     [31m  Unable to find link "Attack Mary"[0m
-     [36m# ./spec/features/player_1_turn_spec.rb:6:in `block (2 levels) in <top (required)>'[0m
-
-  3) Player 1 turn click link to attack player 2
-     [31mFailure/Error: [0mclick_link([31m[1;31m'[0m[31mAttack Mary[1;31m'[0m[31m[0m)[0m
-     [31m[0m
-     [31mCapybara::ElementNotFound:[0m
-     [31m  Unable to find link "Attack Mary"[0m
-     [36m# ./spec/features/player_1_turn_spec.rb:10:in `block (2 levels) in <top (required)>'[0m
-
-  4) See player 2 hitpoints Player 1 can see player 2 hitpoints
-     [31mFailure/Error: [0mexpect(page).to have_text([31m[1;31m'[0m[31mMary has 100 points[1;31m'[0m[31m[0m)[0m
-     [31m  expected to find text "Mary has 100 points" in "John attacked Mary John has 100 points Mary has 90 points Attack John"[0m
-     [36m# ./spec/features/player_2_hitpoints_spec.rb:8:in `block (2 levels) in <top (required)>'[0m
-
-  5) Player 2 turn find link to attack player 1
-     [31mFailure/Error: [0mclick_link([31m[1;31m'[0m[31mAttack Mary[1;31m'[0m[31m[0m)[0m
-     [31m[0m
-     [31mCapybara::ElementNotFound:[0m
-     [31m  Unable to find link "Attack Mary"[0m
-     [36m# ./spec/features/player_2_turn_spec.rb:6:in `block (2 levels) in <top (required)>'[0m
-
-  6) Player 2 turn click link to attack player 1
-     [31mFailure/Error: [0mclick_link([31m[1;31m'[0m[31mAttack Mary[1;31m'[0m[31m[0m)[0m
-     [31m[0m
-     [31mCapybara::ElementNotFound:[0m
-     [31m  Unable to find link "Attack Mary"[0m
-     [36m# ./spec/features/player_2_turn_spec.rb:11:in `block (2 levels) in <top (required)>'[0m
-
-  7) Game#player1 retrieves the first player
+  1) Game#player1 retrieves the first player
      [31mFailure/Error: [0mexpect(game.player1).to eq player1[0m
      [31m[0m
      [31m  expected: #<Double :player1>[0m
-     [31m       got: #<Player:0x007f886b950df8 @name=#<Double :player1>, @hp=100>[0m
+     [31m       got: #<Player:0x007fa823aea038 @name=#<Double :player1>, @hp=100>[0m
      [31m[0m
      [31m  (compared using ==)[0m
      [31m[0m
      [31m  Diff:[0m[0m
      [31m  [0m[34m@@ -1,2 +1,2 @@[0m
      [31m  [0m[31m-#<Double :player1>[0m
-     [31m  [0m[32m+#<Player:0x007f886b950df8 @hp=100, @name=#<Double :player1>>[0m
+     [31m  [0m[32m+#<Player:0x007fa823aea038 @hp=100, @name=#<Double :player1>>[0m
      [31m  [0m[0m
      [36m# ./spec/game_spec.rb:15:in `block (3 levels) in <top (required)>'[0m
 
-  8) Game#player2 retrieves the second player
+  2) Game#player2 retrieves the second player
      [31mFailure/Error: [0mexpect(game.player2).to eq player2[0m
      [31m[0m
      [31m  expected: #<Double :player2>[0m
-     [31m       got: #<Player:0x007f886b90a740 @name=#<Double :player2>, @hp=100>[0m
+     [31m       got: #<Player:0x007fa82503b680 @name=#<Double :player2>, @hp=100>[0m
      [31m[0m
      [31m  (compared using ==)[0m
      [31m[0m
      [31m  Diff:[0m[0m
      [31m  [0m[34m@@ -1,2 +1,2 @@[0m
      [31m  [0m[31m-#<Double :player2>[0m
-     [31m  [0m[32m+#<Player:0x007f886b90a740 @hp=100, @name=#<Double :player2>>[0m
+     [31m  [0m[32m+#<Player:0x007fa82503b680 @hp=100, @name=#<Double :player2>>[0m
      [31m  [0m[0m
      [36m# ./spec/game_spec.rb:21:in `block (3 levels) in <top (required)>'[0m
 
-Finished in 0.15168 seconds (files took 0.75731 seconds to load)
-[31m11 examples, 8 failures[0m
+Finished in 0.15454 seconds (files took 0.7729 seconds to load)
+[31m11 examples, 2 failures[0m
 
 Failed examples:
 
-[31mrspec ./spec/features/name_forms_spec.rb:4[0m [36m# Entering names User enters their name[0m
-[31mrspec ./spec/features/player_1_turn_spec.rb:4[0m [36m# Player 1 turn find link to attack player 2[0m
-[31mrspec ./spec/features/player_1_turn_spec.rb:8[0m [36m# Player 1 turn click link to attack player 2[0m
-[31mrspec ./spec/features/player_2_hitpoints_spec.rb:5[0m [36m# See player 2 hitpoints Player 1 can see player 2 hitpoints[0m
-[31mrspec ./spec/features/player_2_turn_spec.rb:4[0m [36m# Player 2 turn find link to attack player 1[0m
-[31mrspec ./spec/features/player_2_turn_spec.rb:9[0m [36m# Player 2 turn click link to attack player 1[0m
 [31mrspec ./spec/game_spec.rb:14[0m [36m# Game#player1 retrieves the first player[0m
 [31mrspec ./spec/game_spec.rb:20[0m [36m# Game#player2 retrieves the second player[0m
 

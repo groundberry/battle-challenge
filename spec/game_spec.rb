@@ -1,13 +1,13 @@
 require 'game'
 
 describe Game do
-  subject(:game) { described_class.new(player1, player2) }
+  subject(:game) { described_class.new(player1.name, player2.name) }
   let (:player1) { double :player1 }
   let (:player2) { double :player2 }
 
   before :each do
-    allow(player1).to receive('John')
-    allow(player2).to receive('Mary')
+    allow(player1).to receive(:name).and_return('John')
+    allow(player2).to receive(:name).and_return('Mary')
   end
 
   describe '#player1' do
