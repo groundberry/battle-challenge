@@ -1,42 +1,5 @@
-[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
 
-Failures:
-
-  1) Game#player1 retrieves the first player
-     [31mFailure/Error: [0mexpect(game.player1).to eq player1[0m
-     [31m[0m
-     [31m  expected: #<Double :player1>[0m
-     [31m       got: #<Player:0x007fa823aea038 @name=#<Double :player1>, @hp=100>[0m
-     [31m[0m
-     [31m  (compared using ==)[0m
-     [31m[0m
-     [31m  Diff:[0m[0m
-     [31m  [0m[34m@@ -1,2 +1,2 @@[0m
-     [31m  [0m[31m-#<Double :player1>[0m
-     [31m  [0m[32m+#<Player:0x007fa823aea038 @hp=100, @name=#<Double :player1>>[0m
-     [31m  [0m[0m
-     [36m# ./spec/game_spec.rb:15:in `block (3 levels) in <top (required)>'[0m
-
-  2) Game#player2 retrieves the second player
-     [31mFailure/Error: [0mexpect(game.player2).to eq player2[0m
-     [31m[0m
-     [31m  expected: #<Double :player2>[0m
-     [31m       got: #<Player:0x007fa82503b680 @name=#<Double :player2>, @hp=100>[0m
-     [31m[0m
-     [31m  (compared using ==)[0m
-     [31m[0m
-     [31m  Diff:[0m[0m
-     [31m  [0m[34m@@ -1,2 +1,2 @@[0m
-     [31m  [0m[31m-#<Double :player2>[0m
-     [31m  [0m[32m+#<Player:0x007fa82503b680 @hp=100, @name=#<Double :player2>>[0m
-     [31m  [0m[0m
-     [36m# ./spec/game_spec.rb:21:in `block (3 levels) in <top (required)>'[0m
-
-Finished in 0.15454 seconds (files took 0.7729 seconds to load)
-[31m11 examples, 2 failures[0m
-
-Failed examples:
-
-[31mrspec ./spec/game_spec.rb:14[0m [36m# Game#player1 retrieves the first player[0m
-[31mrspec ./spec/game_spec.rb:20[0m [36m# Game#player2 retrieves the second player[0m
+Finished in 0.11035 seconds (files took 0.77253 seconds to load)
+[32m13 examples, 0 failures[0m
 
