@@ -1,73 +1,136 @@
+<body>
+  <div class='top-header'>
+    <h2 class='headers'><%= @game.player1.name %> attacked <%= @game.player2.name %></h2>
+  </div>
 
-<div>
-  <h1><%= @game.player1.name %> vs <%=@game.player2.name %></h1>
+  <div class='subheader'>
+    <div class='subheader-points'>
+      <h2><%= @game.player1.name %> has <%=@game.player1.hp%> points</h2>
+    </div>
+    <div class='subheader-points'>
+      <h2><%= @game.player2.name %> has <%=@game.player2.hp%> points</h2>
+    </div>
+  </div>
 
-  <h2><%= @game.player1.name %> attacked <%= @game.player2.name %></h2>
-
-  <h2 class='points_player1'><%= @game.player1.name %> has <%=@game.player1.hp%> points</h2>
-  <h2 class='points_player2'><%= @game.player2.name %> has <%=@game.player2.hp%> points</h2>
-
-  <a href='/player_2_turn' class='attack_button'>Attack <%=@game.player1.name %></a>
-</div>
+  <div class='attack-button'>
+    <a href='/player_2_turn'>Attack <%=@game.player1.name %></a>
+  </div>
+</body>
 
 
 <style>
 
+body {
+
+  background-image: url('http://bit.ly/2damy0y');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+
+.top-header {
+  width: 90%;
+  height: 150px;
+  vertical-align: middle;
+
+}
+
+.subheader {
+  width: 90%;
+  height: 150px;
+  align-content: center;
+
+}
+
+.subheader-points {
+  width: 45%;
+  height: 100px;
+  display: inline-flex;
+  margin: auto;
+  align-content: center;
+  text-align: center;
+  vertical-align: middle;
+
+}
+
+.attack-button {
+  background-color: #558000;
+  color: white;
+  opacity: 0.7;
+  border-radius: 10px;
+  display: block;
+  vertical-align: middle;
+
+}
+
+.attack-button:hover {
+  transition-delay: 0.10s;
+  background-color: #558000;
+  opacity: 0.4;
+}
+
 h1 {
 
-  font-family: arial
-  font-size: large
+  font-family: impact;
+  font-size: 2em;
+  text-align: center;
 
 }
 
 h2 {
 
-  font-family: arial
-  font-size: medium
+  font-family: impact;
+  font-size: 1.75em;
+  text-align: center;
+  width: 100%
 
 }
 
 a {
 
-  font-family: arial
-  font-size: medium
+  font-family: impact;
+  font-size: 1.8em;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 30px 50px;
+  display: block;
 
 }
 
-.points_player1 {
+h1.headers.top,
+h1.fighters {
+  margin-bottom: 0
+}
 
-  float:left;
-  width:340px;
+.headers {
+  display: block;
+  padding: 30px 0px
 
 }
 
-.points_player2 {
-
-  float:left;
-  width:340px;
+.top-header {
+  font-size: 2em;
 
 }
 
-.attack_button {
-    background-color: #e83cdb;
-    color: #191970;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 10px
+h2.headers {
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: center;
 }
 
-.attack_button:hover {
-    transition-delay: 0.10s;
-
-    background-color: #e87ee1;
-    color: #191970;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 10px
+h2.headers.bottom {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 2.5em;
+  font-family: impact;
+  text-align: center;
 }
 
 </style>
