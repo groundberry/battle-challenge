@@ -1,19 +1,10 @@
 <body>
   <div class='top-header'>
-    <h2 class='headers'><%= @game.player2.name %> attacked <%= @game.player1.name %></h2>
+    <h2 class='headers'>You loose!</h2>
   </div>
 
-  <div class='subheader'>
-    <div class='subheader-points'>
-      <h2><%= @game.player1.name %> has <%=@game.player1.hp%> points</h2>
-    </div>
-    <div class='subheader-points'>
-      <h2><%= @game.player2.name %> has <%=@game.player2.hp%> points</h2>
-    </div>
-  </div>
-
-  <div class='attack-button'>
-    <a href='/player-1-turn' class='attack-button'>Attack <%=@game.player2.name %></a>
+  <div class='play-again-button'>
+    <a href='/start-game' class='play-again-button'>Play again</a>
   </div>
 </body>
 
@@ -58,7 +49,7 @@ body {
 
 }
 
-.attack-button {
+.play-again-button {
   background-color: #558000;
   color: white;
   opacity: 0.7;
@@ -68,7 +59,7 @@ body {
 
 }
 
-.attack-button:hover {
+.play-again-button:hover {
   transition-delay: 0.10s;
   background-color: #558000;
   opacity: 0.4;

@@ -10,4 +10,8 @@ class Game
   def attack(player)
     player.reduce_hp
   end
+
+  def killed?
+    @player1.hp <= 0 || @player2.hp <= 0
+  end
 end
