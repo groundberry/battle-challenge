@@ -5,6 +5,11 @@ describe Game do
   let (:player1) { double :player1 }
   let (:player2) { double :player2 }
 
+  before :each do
+    allow(player1).to receive('John')
+    allow(player2).to receive('Mary')
+  end
+
   describe '#player1' do
     it 'retrieves the first player' do
       expect(game.player1).to eq player1
