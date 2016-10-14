@@ -1,16 +1,16 @@
 
-<body class='start_game'>
+<body class='start-game'>
   <div>
     <h1 class='headers top'>Let battle commence!</h1>
 
     <h1 class='fighters'><%= @game.player1.name %> vs <%=@game.player2.name %></h1>
 
-    <h2 class='points_player1'><%= @game.player1.name %> has <%=@game.player1.hp%> points</h2>
-    <h2 class='points_player2'><%= @game.player2.name %> has <%=@game.player2.hp%> points</h2>
+    <h2 class='points-player1'><%= @game.player1.name %> has <%=@game.player1.hp%> points</h2>
+    <h2 class='points-player2'><%= @game.player2.name %> has <%=@game.player2.hp%> points</h2>
 
     <h1 class='headers bottom'><%= @game.player1.name %> starts the battle by attacking <%=@game.player2.name %></h1>
 
-    <a href='/player_1_turn' class='start_game_button'>Start game</a>
+    <a href='/player-1-turn' class='start-game-button'>Start game</a>
   </div>
 </body>
 
@@ -75,32 +75,34 @@ h1.fighters {
 
 }
 
-.points_player1 {
+.points-player1 {
 
   float: left;
   width: 500px;
 
 }
 
-.points_player2 {
+.points-player2 {
 
   float: right;
   width: 500px;
 
 }
 
-.start_game_button {
+.start-game-button {
   background-color: #558000;
   opacity: 0.7;
   color: white;
   padding: 20px 25px;
+  border-radius: 10px;
   text-align: center;
   text-decoration: none;
   display: block;
-  border-radius: 10px
+  vertical-align: middle;
+
 }
 
-.start_game_button:hover {
+.start-game-button:hover {
   transition-delay: 0.10s;
   background-color: #558000;
   opacity: 0.4;
